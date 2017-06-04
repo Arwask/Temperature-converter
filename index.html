@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Temperature Converter</title>
+</head>
+<body>
+	<form method="get" target="_self" >
+		<div style="width:20%; margin:auto; border: 1px solid black; padding: 20px;">
+			<fieldset>
+					<legend>Unit to convert into:</legend>
+				<input type="radio" name="radio" value="celcius" id="celsius" checked="checked"> 
+				<label for="celsius">Celsius</label>
+				<input type="radio" name="radio" value="fahrenheit" id="fahrenheit"> 
+				<label for="fahrenheit">Fahrenheit</label>
+			</fieldset>
+			<div style="display: inline-block;">
+				<label style="margin: 2.5%; width: 40%; float: left;">Temperature: </label>
+				<input type="text" name="temperature" id="input" onkeyup="return searchKeyPress(event)" style=" margin: 2.5%; width: 40%; float: left;">
+			</div>
+			<div style="display: inline-block;">
+				<label for="answer" style=" margin: 2.5%; width: 40%; float: left;">Answer: </label>
+				<input type="text" name="answer" id="answer" value="" style=" margin: 2.5%; width: 40%; float: left;">
+			</div>
+			<button type="button" id="converter" onclick="determineConverter()" style="width: 40%; margin: 10px; border-radius: 10px;">Convert</button>
+			<button type="reset" style="width: 40%; margin: 10px; border-radius: 10px;">Reset</button><br>
+			
+		</div>
+	</form>
+	<script src="converter.js"></script>
+</body>
+</html>
